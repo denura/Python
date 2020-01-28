@@ -2,7 +2,7 @@ RunTest = input("Run test? (y/n): ")
 if RunTest == 'y':
     InputStrings = ['abc', 'xyz', 'aba', '1221']
 elif RunTest == 'n':
-    InputStrings = input("Input strings (delimiter: space): ").split( )
+    InputStrings = input("Input strings (delimiter: space): ").split(" ")
 else:
     InputStrings = RunTest.split(" ")
 
