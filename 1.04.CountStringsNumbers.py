@@ -4,7 +4,7 @@ if RunTest == 'y':
 elif RunTest == 'n':
     InputStrings = input("Input strings (delimiter: space): ").split( )
 else:
-    InputStrings = RunTest.split( )
+    InputStrings = RunTest.split(" ")
 
 StringsCount = 0
 
