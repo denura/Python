@@ -11,9 +11,9 @@ else:
     FullName = RunTest
 
 if 0 < len(FullName) < 1000:
-    SplittedFullName = FullName.split(" ")
+    SplitFullName = FullName.split(" ")
     FinalName = ""
-    for Name in SplittedFullName:
+    for Name in SplitFullName:
         if Name[0].isdigit():
             FinalName += Name + " "
         else:
