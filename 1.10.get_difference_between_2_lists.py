@@ -1,3 +1,4 @@
+"""10. Write a Python program to get the difference between the two lists"""
 SampleList1 = list("список")
 print("Sample list #1", SampleList1)
 

@@ -1,3 +1,4 @@
+"""9. Write a Python program to remove duplicates from a list."""
 SampleList1 = ['hello', 'daddy', 'hello', 'mum']
 print("Sample list #1:", SampleList1)
 print("Sample list #1 without duplicates:", set(SampleList1))

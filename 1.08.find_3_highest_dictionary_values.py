@@ -1,3 +1,4 @@
+"""8. Write a Python program to find the highest 3 values in a dictionary"""
 from collections import Counter
 
 SampleDictionary = {i: i ** 2 for i in range(1, 6)}

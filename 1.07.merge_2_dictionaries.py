@@ -1,3 +1,4 @@
+"""7. Write a Python script to merge two Python dictionaries"""
 dictionary1 = {'dict': 1, 'dictionary': 2}
 print("Dictionary 1:", dictionary1)
 
