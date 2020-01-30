@@ -5,7 +5,6 @@
 
 def is_even(number):
     """
-
     :type number: int
     """
     odd_counter = 0
@@ -21,8 +20,8 @@ def is_even(number):
     print("Количество нечетных чисел: ", odd_counter)
 
 
-#number = int(input("Введите верхнюю границу интервала: "))
-#is_even(number)
+number = int(input("Введите верхнюю границу интервала: "))
+is_even(number)
 
 # 2. Написать функцию, которая принимает 3 числа (a,b,c) и проверяет сколько чисел между ‘a’ и ‘b’
 # делятся на ‘c’.
@@ -43,10 +42,10 @@ def divisibility(a, b, c):
     print("Количество чисел в нашем интервале, делящихся на %.d: %.d" % (c, divisibility_counter))
 
 
-#a = int(input("Введите число a - нижнюю границу диапазона: "))
-#b = int(input("Введите число b - верхнюю границу диапазона: "))
-#c = int(input("Введите число c - делитель для чисел заданного диапазона: "))
-#divisibility(a, b, c)
+a = int(input("Введите число a - нижнюю границу диапазона: "))
+b = int(input("Введите число b - верхнюю границу диапазона: "))
+c = int(input("Введите число c - делитель для чисел заданного диапазона: "))
+divisibility(a, b, c)
 
 # 3. Написать функцию вычисления факториала числа
 
@@ -65,33 +64,36 @@ def calc_factorial(initial_val):
         print("Факториал введенного числа = ", factorial)
 
 
-#initial_val = int(input("Введите число для вычисления его факториала: "))
-#calc_factorial(initial_val)
+initial_val = int(input("Введите число для вычисления его факториала: "))
+calc_factorial(initial_val)
 
 # 4. Написать свою имплементацию функции range() из Python 2.x (аналогично Python 3,
 # только возвращает список).
 
 
-def python2_range():
-    n = 7  # skolko chlenov vivest
+def python2_range(start, stop, step):
+    """
+    :type start: int
+    :type stop: int
+    :type step: int
+    """
     i = 1
-    acc_an = 2
-    list_ = [0] * n
-    list_[0] = acc_an
-    print(acc_an)
-    while i < n:
-        acc_an = acc_an - 2
-        list_[i] = acc_an
-        print('nomer elementa: %d,sam element %d' % (i, acc_an))
-        i += 1
-    print(list_)
-    print(sum(list_))
-    # 2
-    # nomer elementa: 1,sam element 0
-    # nomer elementa: 2,sam element -2
-    # nomer elementa: 3,sam element -4
-    # nomer elementa: 4,sam element -6
-    # nomer elementa: 5,sam element -8
-    # nomer elementa: 6,sam element -10
-    # [2, 0, -2, -4, -6, -8, -10]
-    # -28
+    if step > 1:
+        result_list = [0] * int((stop - start + step) // step)
+    else:
+        result_list = [0] * int(stop - start)
+    result_list[0] = start
+    if stop == 0:
+        print(result_list)
+    else:
+        while start < (stop - 1):
+            result_list[i] = start + step
+            start += step
+            i += 1
+        print(result_list)
+
+
+start = int(input("Введите первый член арифметической прогрессии: "))
+stop = int(input("Введите последний член арифметической прогрессии: "))
+step = int(input("Введите шаг арифметической прогрессии: "))
+python2_range(start, stop, step)
