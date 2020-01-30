@@ -40,10 +40,30 @@ def divisibility(a, b, c):
             print("Число %.d делится на %.d" % (a, c))
             divisibility_counter += 1
         a += 1
-    print("Количество чисел в нашем интервале, делящихся на %.d: %.d " % (c, divisibility_counter))
+    print("Количество чисел в нашем интервале, делящихся на %.d: %.d" % (c, divisibility_counter))
 
 
 a = int(input("Введите число a - нижнюю границу диапазона: "))
 b = int(input("Введите число b - верхнюю границу диапазона: "))
 c = int(input("Введите число c - делитель для чисел заданного диапазона: "))
 divisibility(a, b, c)
+
+# 3. Написать функцию вычисления факториала числа
+
+
+def calc_factorial(initial_val):
+    """
+    :type initial_val: int
+    """
+    factorial = 1
+    if initial_val == 0:
+        print("%.d! = %d" % (initial_val, factorial))
+    else:
+        while initial_val > 1:
+            factorial *= initial_val
+            initial_val -= 1
+        print("Факториал введенного числа = ", factorial)
+
+
+initial_val = int(input("Введите число для вычисления его факториала: "))
+calc_factorial(initial_val)
