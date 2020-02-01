@@ -1,24 +1,26 @@
 """2. Написать функцию, которая принимает 3 числа (a,b,c) и проверяет сколько чисел между ‘a’ и ‘b’
 делятся на ‘c’.
 """
+DIVISER = diviser
+HIGH_LIMIT = high_limit
 
 
-def divisibility(a, b, c):
+def divisibility(low_limit, HIGH_LIMIT, DIVISER):
     """
-    :type a: int
-    :type b: int
-    :type c: int
+    :type low_limit: int
+    :type HIGH_LIMIT: int
+    :type DIVISER: int
     """
     divisibility_counter = 0
-    while a <= b:
-        if a % c == 0:
-            print("Число %.d делится на %.d" % (a, c))
+    while low_limit <= HIGH_LIMIT:
+        if low_limit % DIVISER == 0:
+            print("Число %.d делится на %.d" % (low_limit, DIVISER))
             divisibility_counter += 1
-        a += 1
-    print("Количество чисел в нашем интервале, делящихся на %.d: %.d" % (c, divisibility_counter))
+        low_limit += 1
+    print("Количество чисел в нашем интервале, делящихся на %.d: %.d" % (DIVISER, divisibility_counter))
 
 
-a = int(input("Введите число a - нижнюю границу диапазона: "))
-b = int(input("Введите число b - верхнюю границу диапазона: "))
-c = int(input("Введите число c - делитель для чисел заданного диапазона: "))
-divisibility(a, b, c)
+low_limit = int(input("Введите число - нижнюю границу диапазона: "))
+HIGH_LIMIT = int(input("Введите число - верхнюю границу диапазона: "))
+DIVISER = int(input("Введите число - делитель для чисел заданного диапазона: "))
+divisibility(low_limit, HIGH_LIMIT, DIVISER)

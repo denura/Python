@@ -1,15 +1,16 @@
 """1. Написать функцию, которая печатает квадраты всех нечетных чисел в произвольном интервале
 [0, Х]. А так же количество таких чисел.
 """
+NUMBER = number
 
 
-def is_even(number):
+def is_even(NUMBER):
     """
-    :type number: int
+    :type NUMBER: int
     """
     odd_counter = 0
     i = 0
-    while i < number:
+    while i < NUMBER:
         i += 1
         if i % 2 > 0:
             print("Нечентное число: ", i)
@@ -20,5 +21,5 @@ def is_even(number):
     print("Количество нечетных чисел: ", odd_counter)
 
 
-number = int(input("Введите верхнюю границу интервала: "))
-is_even(number)
+NUMBER = int(input("Введите верхнюю границу интервала: "))
+is_even(NUMBER)
