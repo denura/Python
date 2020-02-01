@@ -5,7 +5,11 @@
 - третья функция возвращает кубы четных элементов на нечетных позициях.
 """
 
+
 def square_numbers(input_list_whole_numbers):
+    """
+    :type input_list_whole_numbers: list
+    """
     iterator = 0
     for number in input_list_whole_numbers:
         input_list_whole_numbers[iterator] = number * number
