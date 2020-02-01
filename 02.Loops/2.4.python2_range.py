@@ -1,7 +1,6 @@
 """4. Написать свою имплементацию функции range() из Python 2.x (аналогично Python 3,
 только возвращает список).
 """
-STEP = STEP
 
 
 def python2_range(start, stop, STEP):

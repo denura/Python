@@ -1,8 +1,6 @@
 """2. Написать функцию, которая принимает 3 числа (a,b,c) и проверяет сколько чисел между ‘a’ и ‘b’
 делятся на ‘c’.
 """
-DIVISER = diviser
-HIGH_LIMIT = high_limit
 
 
 def divisibility(low_limit, HIGH_LIMIT, DIVISER):
