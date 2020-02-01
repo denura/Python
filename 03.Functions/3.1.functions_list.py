@@ -7,17 +7,29 @@
 
 
 def square_numbers(list_whole_numbers):
-    """
-    :type list_whole_numbers: int
-    """
+    """функция должна вернуть квадраты элементов коллекции"""
     iterator = 0
+    result_list_whole_numbers = [0] * len(list_whole_numbers)
     for number in list_whole_numbers:
-        list_whole_numbers[iterator] *= number
+        result_list_whole_numbers[iterator] = number * number
         iterator += 1
-    print("Квадраты элементов коллекции:", list_whole_numbers)
+    print("Квадраты элементов коллекции:", result_list_whole_numbers)
+    return result_list_whole_numbers
+
+def even_position_elements(list_whole_numbers):
+    """функция должна вернуть только элементы на четных позициях"""
+    input_iterator = 0
+    result_list_whole_numbers = []
+    for number in list_whole_numbers:
+        if input_iterator % 2 == 0:
+            result_list_whole_numbers.append(list_whole_numbers[input_iterator])
+        input_iterator += 1
+    print("Список элементов на четных позициях", result_list_whole_numbers)
+    return result_list_whole_numbers
 
 
-list_whole_numbers = [1, 2, 3, 5, 7]
-print("Список целых чисел:", list_whole_numbers)
+list_whole_numbers = (1, 2, 3, 5, 7)
+print("Кортеж целых чисел:", list_whole_numbers)
 
 square_numbers(list_whole_numbers)
+even_position_elements(list_whole_numbers)

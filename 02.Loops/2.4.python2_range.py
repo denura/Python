@@ -9,20 +9,19 @@ def python2_range(start, stop, step):
     :type stop: int
     :type step: int
     """
-    i = 1
-    if step > 1:
-        result_list = [0] * int((stop - start + step) // step)
+    iterator = 0
+    result_list = []
+    if step > 0:
+        while start + (iterator * step) < stop:
+            result_list.append(start + iterator * step)
+            iterator += 1
+    elif step < 0:
+        while start + (iterator * step) > stop:
+            result_list.append(start + iterator * step)
+            iterator += 1
     else:
-        result_list = [0] * int(stop - start)
-    result_list[0] = start
-    if stop == 0:
-        print(result_list)
-    else:
-        while start < (stop - 1):
-            result_list[i] = start + step
-            start += step
-            i += 1
-        print(result_list)
+        print("Ошибка: шаг арифметической прогрессии не может быть нулевым!")
+    print("Арифметическая прогрессия:", result_list)
 
 
 start = int(input("Введите первый член арифметической прогрессии: "))
