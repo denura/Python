@@ -6,16 +6,18 @@
 """
 
 
-def square_numbers(input_list_whole_numbers):
+def square_numbers(list_whole_numbers):
     """
-    :type input_list_whole_numbers: list
+    :type list_whole_numbers: int
     """
     iterator = 0
-    for number in input_list_whole_numbers:
-        input_list_whole_numbers[iterator] = number * number
+    for number in list_whole_numbers:
+        list_whole_numbers[iterator] *= number
         iterator += 1
-    print("Квадраты элементов коллекции:", input_list_whole_numbers)
+    print("Квадраты элементов коллекции:", list_whole_numbers)
 
 
-input_list_whole_numbers = input("Введите список целых чисел (разделитель - пробел): ").split(" ")
-square_numbers(input_list_whole_numbers)
+list_whole_numbers = [1, 2, 3, 5, 7]
+print("Список целых чисел:", list_whole_numbers)
+
+square_numbers(list_whole_numbers)
