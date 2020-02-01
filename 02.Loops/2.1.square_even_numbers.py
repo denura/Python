@@ -3,13 +3,13 @@
 """
 
 
-def is_even(NUMBER):
+def is_even(number):
     """
-    :type NUMBER: int
+    :type number: int
     """
     odd_counter = 0
     i = 0
-    while i < NUMBER:
+    while i < number:
         i += 1
         if i % 2 > 0:
             print("Нечентное число: ", i)
@@ -20,5 +20,5 @@ def is_even(NUMBER):
     print("Количество нечетных чисел: ", odd_counter)
 
 
-NUMBER = int(input("Введите верхнюю границу интервала: "))
-is_even(NUMBER)
+number = int(input("Введите верхнюю границу интервала: "))
+is_even(number)
