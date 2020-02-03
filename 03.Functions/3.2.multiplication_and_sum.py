@@ -14,6 +14,8 @@ def multiplication_and_sum(*arguments_lists):
     """
     for argument in arguments_lists:
         if isinstance(argument, tuple):
+            print(int(argument))
+        elif isinstance(argument, list):
             print(argument.split())
         else:
             print(type(argument), argument)
