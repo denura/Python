@@ -6,3 +6,16 @@
                   foo(-3, -2, 10, 1) -> 1.5, 10
                   foo(7,8,8,1) -> 6, 10
                   """
+
+def average_and_maximum_argument(arg1, arg2, arg3, arg4):
+    """Функция должна вернуть среднее арифметическое аргументов и самый большой аргумент за все
+    время вызовов этой функции"""
+    average = (arg1 + arg2 + arg3 + arg4) / 4
+    maximum = arg1
+    print(average)
+    return average
+
+
+average_and_maximum_argument(1, 2, 3, 4)
+average_and_maximum_argument(-3, -2, 10, 1)
+average_and_maximum_argument(7, 8, 8, 1)

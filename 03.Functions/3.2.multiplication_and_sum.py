@@ -23,6 +23,8 @@ def multiplication_and_sum(*arguments_lists):
             print(sum_int)
             print(mul_int)
         else:
+            # TODO: если передано не число типа int, то надо перебирать элементы аргумента до тех пор,
+            #  пока они не будут иметь тип int, затем провести умножение и сложение между ними
             while not isinstance(argument, int):
                 for arg in argument:
                     sum_other += argument
