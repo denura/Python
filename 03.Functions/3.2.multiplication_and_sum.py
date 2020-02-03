@@ -5,3 +5,18 @@
     Возможны циклические ссылки в аргументах. Пример такого аргумента: a = [1, 2, 3]; a.append(a)
     При обнаружении циклической ссылки нужно сообщить пользователю и вернуть None.
     """
+
+
+def multiplication_and_sum(*arguments_lists):
+    """В Python можно передать переменное количество аргументов двумя способами:
+    *args для неименованных аргументов;
+    **kwargs для именованных аргументов.
+    """
+    for argument in arguments_lists:
+        if isinstance(argument, tuple):
+            print(argument.split())
+        else:
+            print(type(argument), argument)
+
+
+multiplication_and_sum(1, 2, [3, 4, (5, 6, 0)], (10, 11), (3, 4, [5, 6, [7, 8], []]))
