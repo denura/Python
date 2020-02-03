@@ -12,13 +12,23 @@ def multiplication_and_sum(*arguments_lists):
     *args для неименованных аргументов;
     **kwargs для именованных аргументов.
     """
+    sum_int = 0
+    mul_int = 1
+    sum_other = 0
+    mul_other = 1
     for argument in arguments_lists:
-        if isinstance(argument, tuple):
-            print(int(argument))
-        elif isinstance(argument, list):
-            print(argument.split())
+        if isinstance(argument, int):
+            sum_int += argument
+            mul_int *= argument
+            print(sum_int)
+            print(mul_int)
         else:
-            print(type(argument), argument)
+            while not isinstance(argument, int):
+                for arg in argument:
+                    sum_other += argument
+                    mul_other *= argument
+                    print(sum_other)
+                    print(mul_other)
 
 
 multiplication_and_sum(1, 2, [3, 4, (5, 6, 0)], (10, 11), (3, 4, [5, 6, [7, 8], []]))
