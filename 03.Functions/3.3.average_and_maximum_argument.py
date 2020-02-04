@@ -11,9 +11,11 @@ def average_and_maximum_argument(arg1, arg2, arg3, arg4):
     """Функция должна вернуть среднее арифметическое аргументов и самый большой аргумент за все
     время вызовов этой функции"""
     average = (arg1 + arg2 + arg3 + arg4) / 4
-    maximum = arg1
-    print(average)
-    return average
+    maximum = max(arg1, arg2, arg3, arg4)
+    print("Среднее арифметическое", arg1, arg2, arg3, arg4, ":", average, "Максимум:", maximum)
+    # TODO: запомнить предыдйщий результат выдова функции для возврата максимального значения
+    #  за все время вызова - с помощью декоратора?
+    return average, maximum
 
 
 average_and_maximum_argument(1, 2, 3, 4)

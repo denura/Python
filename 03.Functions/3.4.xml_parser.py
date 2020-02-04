@@ -19,3 +19,11 @@
         }, 2
       в данном случае у element4 тэга вложенность/глубина 2
       """
+
+
+def xml_parser(xml_string):
+    """"выполнить следующее преобразование и вывести максимальную вложенность."""
+    xml_string.split("<", ">")
+
+xml_string = '<root><element1 /><element2 /><element3><element4 /></element3></root>'
+xml_parser(xml_string)
