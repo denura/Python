@@ -8,16 +8,18 @@
     """
 
 
-def near_zero(input_string):
-    near_zero_element = abs(input_string[0])
-    for element in input_string:
-        abs_element = abs(element)
-        if near_zero_element > abs_element:
-            near_zero_element = abs_element
+def f(s):
+    nz = abs(s[0])
+    for e in s:
+        ae = abs(e)
+        if nz > ae:
+            nz = ae
+            re = e
+    print(re)
+    return re
 
-    print(near_zero_element)
-    return near_zero_element
 
-# input_string = input("Введите строку чисел:")
-input_string = (1, 2, -0.5, 0.75, 22)
-near_zero(input_string)
+s = (1, 2, -0.5, 0.75, 22)
+print("Given string:", s)
+
+f(s)
