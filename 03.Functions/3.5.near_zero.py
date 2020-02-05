@@ -7,7 +7,17 @@
     пример foo() -> пользователь ввел '1 2 -0.5 0.75 22' -> функция доджна вернуть -0.5
     """
 
-def foo():
-    return
 
-input_string = input("Введите строку целых чисел:")
+def near_zero(input_string):
+    near_zero_element = abs(input_string[0])
+    for element in input_string:
+        abs_element = abs(element)
+        if near_zero_element > abs_element:
+            near_zero_element = abs_element
+
+    print(near_zero_element)
+    return near_zero_element
+
+# input_string = input("Введите строку чисел:")
+input_string = (1, 2, -0.5, 0.75, 22)
+near_zero(input_string)
