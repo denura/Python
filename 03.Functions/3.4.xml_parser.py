@@ -20,10 +20,20 @@
       в данном случае у element4 тэга вложенность/глубина 2
       """
 
+import xml.dom.minidom
+import xml.etree.cElementTree
+XML_FILE = "my_xml.xml"
 
 def xml_parser(xml_string):
     """"выполнить следующее преобразование и вывести максимальную вложенность."""
-    print(xml_string.split("<"))
+    doc = xml.dom.minidom.parse(XML_FILE)
+    tree = xml.etree.cElementTree.ElementTree(file=XML_FILE)
+    root = tree.getroot()
+    print("name:", root.tag)
+
+    for child_of_root in root:
+        print (child_of_root.tag)
+
 
 xml_string = '<root><element1 /><element2 /><element3><element4 /></element3></root>'
 xml_parser(xml_string)
