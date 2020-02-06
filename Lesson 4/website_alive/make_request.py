@@ -9,9 +9,4 @@ import requests
 
 def get(url):
     """делает запрос на сайт с использованием библиотеки requests, и возвращает объект"""
-    get_url_request = requests.get(url)
-    print(get_url_request)
-    return get_url_request
-
-url = 'http://google.ru/'
-get(url)
+    return requests.get(url)

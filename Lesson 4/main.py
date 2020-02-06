@@ -2,8 +2,10 @@
 пользователя адрес сайта, который необходимо проверить. Дальше делает проверку, используя пакет
 website_alive, и пишет, доступен ли сайт."""
 
-import website_alive
-from check_response import get_url
+import website_alive.check_response
 
-url = input("Введите адрес сайта для проверки: ")
-get_url(url)
+URL = input("Введите адрес сайта для проверки, например, http://ya.ru: ")
+if website_alive.check_response.get_url(URL):
+    print("Сайт доступен")
+else:
+    print("Сайт недоступен")
