@@ -8,6 +8,7 @@ import requests
 
 
 def get(url):
-    r = requests.get(url)
-    print(r)
-    return r
+    """делает запрос на сайт с использованием библиотеки requests, и возвращает объект"""
+    url_request = requests.get(url)
+    print(url_request)
+    return url_request
