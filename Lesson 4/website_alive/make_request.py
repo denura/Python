@@ -12,3 +12,6 @@ def get(url):
     get_url_request = requests.get(url)
     print(get_url_request)
     return get_url_request
+
+url = 'http://google.ru/'
+get(url)

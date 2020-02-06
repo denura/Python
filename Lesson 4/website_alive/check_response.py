@@ -17,3 +17,6 @@ def get_url(url):
     else:
         print("False")
         return False
+
+url = 'http://google.ru/'
+get_url(url)
