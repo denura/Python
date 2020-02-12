@@ -18,6 +18,8 @@ Sample Output: 7.00+7.00i
 2.24+0.00i
 7.81+0.00i
 P.S. Не забудьте про перегрузку магических методов, пожалуйста"""
+
+
 class ComplexClass(object):
     def metod1(self, x):
         pass
