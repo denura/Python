@@ -11,3 +11,23 @@
 """
 
 
+import functools
+import time
+
+def name(function):
+
+    @functools.wraps(function)
+    def a(*args, **kwargs):
+        current_time = time()
+        result = function(*args, **kwargs)
+        print(f'function {function.__name__}) runs: {time() - current_time}')
+        return result
+    return a
+
+@name
+def foo(a):
+    time.sleep(a)
+    return a
+
+foo(2)
+foo(5)
