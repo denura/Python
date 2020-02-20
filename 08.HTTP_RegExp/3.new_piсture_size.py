@@ -11,5 +11,12 @@
 import requests
 
 def new_picture_size(jpeg_path, file_name):
-    response = requests.post('https://postman-echo.com/post', data={'jpeg_path', 'file_name'})
-    response
+    """Функция должна вернуть размер сохраненного файла"""
+    url = 'https://postman-echo.com/post'
+    files = {'file': (open('jpeg_path', 'rb'), 'image/jpeg')}
+    response = requests.post(url, files=files)
+    response.raise_for_status()
+    file = open('file_name', 'w')
+    file.write(response.text)
+    file.close()
+    return len(file_name)
