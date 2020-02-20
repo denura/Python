@@ -6,4 +6,9 @@ YYYY-MM-DDThh:mm:ss±hh:mm (ISO формат).
 """
 
 
-^\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}[-+]\d{2}:\d{2}$
+import re
+reg_exp = re.compile('^\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}[-+]\d{2}:\d{2}$')
+sample1 = '2005-08-09T18:31:42+03:30'
+sample2 = '2005-08-09T18:31:42-03:30'
+print(re.match(reg_exp, sample1))
+print(re.match(reg_exp, sample2))
