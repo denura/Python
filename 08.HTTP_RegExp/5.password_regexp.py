@@ -5,3 +5,6 @@
 """
 
 
+import re
+
+REG_EXP = re.compile('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z_*%&]{8,12}')
