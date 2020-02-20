@@ -5,5 +5,3 @@
 import re
 
 REG_EXP = re.compile('(\w{3,}\s?){4,}[?]')
-test_str = 'test test test test test? test test test test test?'
-print(re.match(REG_EXP, test_str))
