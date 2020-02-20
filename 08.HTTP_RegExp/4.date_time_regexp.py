@@ -7,8 +7,8 @@ YYYY-MM-DDThh:mm:ss±hh:mm (ISO формат).
 
 
 import re
-reg_exp = re.compile('^\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}[-+]\d{2}:\d{2}$')
-sample1 = '2005-08-09T18:31:42+03:30'
-sample2 = '2005-08-09T18:31:42-03:30'
-print(re.match(reg_exp, sample1))
-print(re.match(reg_exp, sample2))
+
+REG_EXP = re.compile('^\d{4}(-\d{2}){2}T\d{2}(:\d{2}){2}[-+]\d{2}:\d{2}$')
+SAMPLE1 = '2005-08-09T18:31:42+03:30'
+SAMPLE2 = '2005-08-09T18:31:42-03:30'
+print(re.match(REG_EXP, SAMPLE1), '\n', re.match(REG_EXP, SAMPLE2))
