@@ -5,8 +5,9 @@ import requests
 
 
 def html_page_size(url):
-    html_length = len(requests.get(url).text)
-    return html_length
+    """функция, которая возвращает размер HTML документа по переданному адресу"""
+    return len(requests.get(url).text)
 
-url = 'https://google.com'
+
+url = "https://google.com"
 print("Размер HTML документа по адресу", url, "равен", html_page_size(url), "(символов)")
