@@ -8,3 +8,8 @@
 """
 
 
+import requests
+
+def new_picture_size(jpeg_path, file_name):
+    response = requests.post('https://postman-echo.com/post', data={'jpeg_path', 'file_name'})
+    response
