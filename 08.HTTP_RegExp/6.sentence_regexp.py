@@ -5,7 +5,7 @@
 import re
 
 REG_EXP = re.compile('(\w{3,}\s?){4,}[?]')
-test_str = 'test test test test test? test test test test test?'
-iterator = re.finditer(REG_EXP, test_str)
-for match in iterator:
+TEST_STR = 'test test test test test? test test test test test?'
+ITERATOR = re.finditer(REG_EXP, TEST_STR)
+for match in ITERATOR:
     print('Совпадение найдено в позициях:', match.span())
